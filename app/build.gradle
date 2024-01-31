@@ -1,0 +1,57 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    compileSdkVersion 33
+
+
+
+    defaultConfig {
+        namespace 'com.example.namespace'
+        applicationId "com.example.womesSafteyf"
+        minSdkVersion 24
+        targetSdkVersion 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+        customDebugType {
+            debuggable true
+
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation 'androidx.sqlite:sqlite:2.4.0-alpha01'
+    implementation 'com.google.android.material:material:1.9.0' // Updated version
+    implementation 'androidx.sqlite:sqlite:2.3.1' // Remove duplicate dependency
+
+    implementation 'androidx.appcompat:appcompat:1.6.1' // Updated version
+    implementation 'com.google.android.material:material:1.9.0' // Updated version
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4' // Updated version
+    implementation 'au.com.dius.pact.provider:maven:4.6.0'
+    implementation 'ch.ergon.adam:sqlite:1.1.0'
+    implementation 'androidx.test.ext:junit:1.1.5'
+    implementation 'com.android.support:support-annotations:28.0.0'// Updated version
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1' // Updated version
+
+    implementation 'com.github.tbouron.shakedetector:library:1.0.0@aar'
+    implementation 'com.google.android.gms:play-services-maps:18.1.0' // Updated version
+    implementation 'com.google.android.gms:play-services-location:21.0.1' // Updated version
+    implementation 'com.readystatesoftware.sqliteasset:sqliteassethelper:2.0.1'
+}
